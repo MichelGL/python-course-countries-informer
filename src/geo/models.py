@@ -96,3 +96,27 @@ class City(TimeStampMixin):
         verbose_name = "Город"
         verbose_name_plural = "Города"
         ordering = ["name"]
+
+class Currency(TimeStampMixin):
+    """Модель валюты"""
+
+    base = models.CharField(verbose_name="Название валюты", max_length=255)
+    date = models.DateTimeField(verbose_name="Дата проверки валюты")
+
+    class Meta:
+        verbose_name = "Валюта"
+
+
+class CurrencyRates(TimeStampMixin):
+    """Модель курсов валют"""
+
+    currency = models.ForeignKey(
+        Currency,
+        on_delete=models.PROTECT,
+        related_name="currency",
+        verbose_name="Валюта",
+    )
+    currency_name = models.CharField(
+        verbose_name="Валюта для сравнения", max_length=255
+    )
+    rate = models.FloatField(verbose_name="Отношение валют")
