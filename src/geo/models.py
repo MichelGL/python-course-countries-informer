@@ -105,6 +105,7 @@ class Currency(TimeStampMixin):
 
     class Meta:
         verbose_name = "Валюта"
+        verbose_name_plural = "Валюты"
 
 
 class CurrencyRates(TimeStampMixin):
@@ -120,6 +121,10 @@ class CurrencyRates(TimeStampMixin):
         verbose_name="Валюта для сравнения", max_length=255
     )
     rate = models.FloatField(verbose_name="Отношение валют")
+
+    class Meta:
+        verbose_name = "Курс валюты"
+        verbose_name_plural = "Курсы валют"
 
 
 class Weather(TimeStampMixin):
