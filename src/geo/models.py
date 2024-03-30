@@ -97,6 +97,7 @@ class City(TimeStampMixin):
         verbose_name_plural = "Города"
         ordering = ["name"]
 
+
 class Currency(TimeStampMixin):
     """Модель валюты"""
 

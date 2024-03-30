@@ -22,9 +22,7 @@ class NewsService:
         :return:
         """
 
-        news = News.objects.filter(
-            Q(country__alpha2code__contains=country_code)
-        )
+        news = News.objects.filter(Q(country__alpha2code__contains=country_code))
         if not news:
             if news_data := NewsClient().get_news(country_code):
                 # Получаем коды стран

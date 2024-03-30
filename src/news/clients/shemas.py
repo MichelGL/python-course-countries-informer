@@ -24,8 +24,6 @@ class NewsItemDTO(BaseModel):
         )
     """
 
-
-
     source: str
     author: Optional[str]
     title: str

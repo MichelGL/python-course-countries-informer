@@ -6,16 +6,19 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('geo', '0004_weather'),
+        ("geo", "0004_weather"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='currency',
-            options={'verbose_name': 'Валюта', 'verbose_name_plural': 'Валюты'},
+            name="currency",
+            options={"verbose_name": "Валюта", "verbose_name_plural": "Валюты"},
         ),
         migrations.AlterModelOptions(
-            name='currencyrates',
-            options={'verbose_name': 'Курс валюты', 'verbose_name_plural': 'Курсы валют'},
+            name="currencyrates",
+            options={
+                "verbose_name": "Курс валюты",
+                "verbose_name_plural": "Курсы валют",
+            },
         ),
     ]
