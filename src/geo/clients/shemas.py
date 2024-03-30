@@ -178,6 +178,8 @@ class WeatherInfoDTO(BaseModel):
             humidity=54,
             wind_speed=4.63,
             description="scattered clouds",
+            visibility=10000,
+            timezone=0,
         )
     """
 
@@ -186,6 +188,8 @@ class WeatherInfoDTO(BaseModel):
     humidity: int
     wind_speed: float
     description: str
+    visibility: int
+    timezone: int
 
 
 class LocationInfoDTO(BaseModel):
